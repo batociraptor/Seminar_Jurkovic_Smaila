@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styling.css' %}">-->
+</head>
+
+<body>
+    <h1>Homepage</h1>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/main">Homepage</a></li>
+            <li><a href="/main/user">Users</a></li>
+            <li><a href="/main/profile">Profiles</a></li>
+            <li><a href="/main/like">Likes</a></li>
+            <li><a href="/main/comment">Comments</a></li>
+            <li><a href="/main/post">Posts</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
